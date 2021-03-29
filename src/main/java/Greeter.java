@@ -1,11 +1,9 @@
 public class Greeter {
 
 
-    public static void main(String[] args) {
+    static String greet(String name) {
+//        System.out.println("Hello " + name);
 
-    }
-
-    void greet(String name) {
-        System.out.println("Hello " + name);
+        return name;
     }
 }
