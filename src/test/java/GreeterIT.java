@@ -20,4 +20,14 @@ class GreeterIT {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void testGreetGustav(){
+        Greeter greet = new Greeter();
+        String expected = "TJENARE";
+        String name = "TJENARE, Farrukhs dator fryser!";
+        String actual = name.substring(0,7);
+        assertEquals(expected, actual);
+    }
+
+
 }
