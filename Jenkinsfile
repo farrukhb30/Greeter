@@ -1,19 +1,24 @@
-pipeline{
+pipeline {
     agent any
-    tools{
+    tools {
         maven 'Maven 3.6.3'
     }
-    stages{
-        stage('Build'){
-            steps{
+    stages {
+        stage('Build') {
+            steps {
                 echo 'Hello World'
                 sh 'java --version'
                 sh 'mvn clean compile'
             }
         }
-        stage('Test'){
-            steps{
+        stage('Test') {
+            steps {
                 sh 'mvn test'
+            }
+            stage('IntegrationsTest') {
+                steps {
+                    sh 'mvn failsafe:integration-test'
+                }
             }
         }
     }
