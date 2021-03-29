@@ -1,9 +1,11 @@
 import com.google.common.base.CharMatcher;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.util.StringUtils;
+
 
 import static org.junit.jupiter.api.Assertions.*;
+
+
 
 class GreeterIT {
 
@@ -29,5 +31,13 @@ class GreeterIT {
         String actual = greet.greet(StringUtils.capitalize("tahar"));
         assertEquals(expected, actual);
     }
+    @Test
+    void testFGoodMorning(){
+        Greeter greet = new Greeter();
+        String expected = "Good morning Tahar";
+        String actual = greet.greet(StringUtils.capitalize("tahar"));
+        assertEquals(expected, actual);
+    }
+    
 
 }
