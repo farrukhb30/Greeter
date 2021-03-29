@@ -11,4 +11,11 @@ class GreeterTest {
         assertEquals(expected, greet.greet("Tahar"));
     }
 
+    @Test
+    void testGreetTrim(){
+        Greeter greet = new Greeter();
+        String expected = "Tahar";
+        assertEquals(expected, greet.greet("       Tahar"));
+    }
+
 }

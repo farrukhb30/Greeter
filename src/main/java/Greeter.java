@@ -2,8 +2,8 @@ public class Greeter {
 
 
     static String greet(String name) {
-//        System.out.println("Hello " + name);
 
+        name = name.trim();
         return name;
     }
 }
